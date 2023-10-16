@@ -1,3 +1,4 @@
+
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 class UserEntity {
   String userId;
@@ -13,4 +14,6 @@ class UserEntity {
     required this.userCel,
     required this.userCrea,
   });
+
+  
 }

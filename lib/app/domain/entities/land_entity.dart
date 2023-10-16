@@ -1,14 +1,18 @@
+
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-class LandId {
+class LandEntity {
   String landId;
+  
   double landSize;
   double lat;
   double lon;
   
-  LandId({
+  LandEntity({
     required this.landId,
     required this.landSize,
     required this.lat,
     required this.lon,
   });
+
+  
 }
