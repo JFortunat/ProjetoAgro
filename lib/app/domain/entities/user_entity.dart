@@ -3,16 +3,18 @@
 class UserEntity {
   String userId;
   String userName;
+  String userEmail;
   String userType;
   String userCel;
-  String userCrea;
+  String? userCrea;
   
   UserEntity({
     required this.userId,
     required this.userName,
+    required this.userEmail,
     required this.userType,
     required this.userCel,
-    required this.userCrea,
+    this.userCrea,
   });
 
   

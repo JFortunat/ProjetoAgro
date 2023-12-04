@@ -14,14 +14,21 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const ShapeDecoration(
-        color: Colors.green,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(25),
+      decoration: ShapeDecoration(
+          color: Colors.green[100],
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(25),
+            ),
           ),
-        ),
-      ),
+          shadows: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 1,
+              blurRadius: 1,
+              offset: const Offset(0, 2), // changes position of shadow
+            ),
+          ]),
       height: height,
       width: double.infinity,
       alignment: Alignment.center,

@@ -31,9 +31,9 @@ class UserDAO implements DAO<UserModel> {
   }
 
   @override
-  Future<List<UserModel>> getAll() async {
+  Future<List<UserModel>> getAll(int id) async {
     ResultRow results = await
-        _dbConfig.execQuery('SELECT * FROM farm_db.user_table;');
+        _dbConfig.execQuery('SELECT * FROM farm_db.user_table WHERE user_id = ?;', [id]);
     return results
         .map((r) => UserModel.fromMap(r.fields))
         .toList()
@@ -65,9 +65,4 @@ class UserDAO implements DAO<UserModel> {
         ? null
         : UserModel.fromEmail(results.first.fields);
   }
-
-  // _execQuery(String sql, [List? params]) async {
-  //   var connection = await _dbConfig.connection;
-  //   return await connection.query(sql, params);
-  // }
 }

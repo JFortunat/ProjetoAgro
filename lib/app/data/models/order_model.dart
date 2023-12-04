@@ -7,13 +7,15 @@ class OrderModel extends OrderEntity {
       required super.userId,
       required super.professionalId,
       required super.orderDate,
-      required super.orderDone});
+      required super.orderDone,
+      required super.discription});
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
       'orderId': orderId,
       'userId': userId,
       'professionalId': professionalId,
+      'discription': discription,
       'orderDate': orderDate.millisecondsSinceEpoch,
       'orderDone': orderDone,
     };
@@ -26,6 +28,7 @@ class OrderModel extends OrderEntity {
       professionalId: map['professionalId'] as String,
       orderDate: DateTime.fromMillisecondsSinceEpoch(map['orderDate'] as int),
       orderDone: map['orderDone'] as bool,
+      discription: map['userId'] as String,
     );
   }
 

@@ -23,9 +23,7 @@ class _LoginViewState extends State<LoginView> {
               child: Column(children: [
                 Expanded(
                   flex: 2,
-                  child: Center(
-                    child: Text('Farm Buddy!'),
-                  ),
+                  child: Image.asset('assets/—Pngtree—farmer farmer labor cartoon vector_3143602.png')
                 ),
                 Expanded(
                     flex: 1,
@@ -79,7 +77,6 @@ class _LoginViewState extends State<LoginView> {
                           isLoading: isLoading,
                         ),
                       ),
-                      const Icon(Icons.flutter_dash)
                     ],
                   ),
                 ),

@@ -7,7 +7,8 @@ class UserModel extends UserEntity {
       required super.userName,
       required super.userType,
       required super.userCel,
-      required super.userCrea});
+      super.userCrea,
+      required super.userEmail});
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
@@ -15,7 +16,8 @@ class UserModel extends UserEntity {
       'userName': userName,
       'userType': userType,
       'userCel': userCel,
-      'userCrea': userCrea,
+      'userEmail': userEmail,
+      'userCrea': userCrea ?? '',
     };
   }
 
@@ -25,7 +27,8 @@ class UserModel extends UserEntity {
       userName: map['userName'] as String,
       userType: map['userType'] as String,
       userCel: map['userCel'] as String,
-      userCrea: map['userCrea'] as String,
+      userEmail: map['userEmail'] as String,
+      userCrea: map['userCrea'] ?? '',
     );
   }
 

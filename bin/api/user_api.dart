@@ -13,8 +13,8 @@ class UserApi extends Api {
   Handler getHandler({List<Middleware>? middlewares, bool isSecurity = false}) {
     final router = Router();
 
-    router.get('/user/<id>', (Request req, String id) async {
-      var user = await _userService.findOne(int.parse(id));
+    router.get('/user/<userId>', (Request req, String userId) async {
+      var user = await _userService.findOne(int.parse(userId));
       return Response.ok(user.toString());
     });
 

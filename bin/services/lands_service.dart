@@ -12,13 +12,13 @@ class LandsService implements ServiceInterface<LandsModel> {
   }
 
   @override
-  Future<List<LandsModel>> findAll() async {
-    return _landsDAO.getAll();
+  Future<List<LandsModel>> findAll(int id) async {
+    return await _landsDAO.getAll(id);
   }
 
   @override
   Future<LandsModel?> findOne(int id) async {
-    return _landsDAO.getOne(id);
+    return await _landsDAO.getOne(id);
   }
 
   @override

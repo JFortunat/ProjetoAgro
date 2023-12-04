@@ -4,6 +4,7 @@ class OrderEntity {
   String orderId;
   String userId;
   String professionalId;
+  String discription;
   DateTime orderDate;
   bool orderDone;
   
@@ -11,6 +12,7 @@ class OrderEntity {
     required this.orderId,
     required this.userId,
     required this.professionalId,
+    required this.discription,
     required this.orderDate,
     required this.orderDone,
   });
